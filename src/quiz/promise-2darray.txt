@@ -1,1 +1,6 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+The original code will be prior than promise (resolve() and reject()).
+For example, “returning from sum” was logged before any messages from promise.
+Besides, the promise will be prior than setTimeout().
+For example: The immediate reject in sumPromise2 runs before  setTimeout, hence the “BAD INPUT: Expected array as input” was logged before the “resolving…” and””45”.
