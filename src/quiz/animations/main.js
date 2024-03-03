@@ -27,6 +27,19 @@ const aliceTumbling = [
             })
     });
 
+
+    async function animate(){
+      try{
+        await alice1.animate(aliceTumbling, aliceTiming).finished;
+        await alice1.animate(aliceTumbling, aliceTiming).finished;
+        await alice1.animate(aliceTumbling, aliceTiming).finished;
+      }
+      catch(err){
+        console.log(`Error when animating: ${err.message}`);
+      }
+    }
+
+    animate();
   // Promise chain  
   // alice1.animate(aliceTumbling, aliceTiming).finished  
   //   .then(() => {
@@ -39,4 +52,4 @@ const aliceTumbling = [
   //             .animate(aliceTumbling, aliceTiming)
   //             .finished;
   //   })
-  //   .catch((err) => alert(`Error when promising ... ${err.message}`));
+  //   .catch((err) => alert(`Error when promising ... ${err.message}`))
